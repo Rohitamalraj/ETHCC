@@ -10,9 +10,20 @@ const Landing = () => {
     <div className="min-h-screen hero-gradient">
       {/* Navigation */}
       <nav className="flex items-center justify-between p-6 max-w-7xl mx-auto">
-        <div className="flex items-center space-x-2">
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-primary to-accent"></div>
-          <span className="text-xl font-bold">TreasuryAgent</span>
+        <div className="flex items-center space-x-3">
+          {/* Logo placeholder - you can replace this src with your actual logo */}
+          <img 
+            src="C:\Users\lenovo\Downloads\logoo.png" 
+            alt="Neura Swap Logo" 
+            className="w-8 h-8 rounded-lg"
+            onError={(e) => {
+              // Fallback to gradient div if logo doesn't exist
+              e.target.style.display = 'none';
+              e.target.nextElementSibling.style.display = 'block';
+            }}
+          />
+          <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-primary to-accent" style={{ display: 'none' }}></div>
+          <span className="text-xl font-bold">Neura Swap</span>
         </div>
         <div className="hidden md:flex items-center space-x-6">
           <Link to="/dashboard" className="text-muted-foreground hover:text-foreground transition-colors">

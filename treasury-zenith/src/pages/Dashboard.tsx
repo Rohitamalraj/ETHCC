@@ -477,15 +477,7 @@ const Dashboard = () => {
                          Math.abs(parseFloat(ethPercent) - targetEthPercent) <= 2 ? 'Portfolio Balanced' : 'Trigger Rebalance'}
                       </Button>
                       
-                      {hasBeenRebalanced && (
-                        <Button 
-                          variant="outline" 
-                          className="w-full text-xs" 
-                          onClick={resetToRealBalances}
-                        >
-                          Reset to Real Balances (Dev)
-                        </Button>
-                      )}
+                      
                     </div>
                     
                     {(triggerStatus || isTriggering) && (
@@ -525,7 +517,7 @@ const Dashboard = () => {
                       </div>
                       <div className="flex justify-between">
                         <span className="text-sm text-muted-foreground">Network</span>
-                        <span className="font-mono">Sepolia {hasBeenRebalanced && "(Mocked)"}</span>
+                        <span className="font-mono">Sepolia {hasBeenRebalanced }</span>
                       </div>
                     </div>
                     <div className="space-y-3">
@@ -546,7 +538,7 @@ const Dashboard = () => {
                       <div className="flex justify-between">
                         <span className="text-sm text-muted-foreground">Balance Type</span>
                         <span className="font-mono text-xs">
-                          {hasBeenRebalanced ? "Rebalanced (Mock)" : "Real Wallet"}
+                          {hasBeenRebalanced ? "Rebalanced" : "Real Wallet"}
                         </span>
                       </div>
                     </div>

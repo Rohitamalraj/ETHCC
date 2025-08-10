@@ -24,7 +24,7 @@ const DashboardNavigation = () => {
           <div className="flex items-center space-x-8">
             <Link to="/" className="flex items-center space-x-2">
               <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-primary to-accent"></div>
-              <span className="text-xl font-bold">DAO Treasury</span>
+              <span className="text-xl font-bold">Neura Swap</span>
             </Link>
             
             <div className="hidden lg:flex items-center space-x-1">
